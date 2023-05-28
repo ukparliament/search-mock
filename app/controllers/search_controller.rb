@@ -5,7 +5,8 @@ class SearchController < ApplicationController
   
   def form
     json = {
-      "title": "this is some pretend configuration json that might surface available facets and etc."
+      "title": "this is some pretend configuration json that might surface available facets and etc.",
+      "description": "this is a description"
     }
     render( :json => json, status: :ok)
   end
