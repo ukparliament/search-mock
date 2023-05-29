@@ -37,7 +37,7 @@ class SearchController < ApplicationController
   end
   
   def object
-    object = params[:object]
+    object = params[:object].to_i
     if object == 1
       json = {
         "id": 1,
