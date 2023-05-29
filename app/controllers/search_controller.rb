@@ -15,11 +15,13 @@ class SearchController < ApplicationController
     json = {
       "results": [
         {
+          "id": 1,
           "title": "This is a pretend result title",
           "description": "This is a pretend result description.",
           "link": "https://www.youtube.com/@harrysgarage"
         },
         {
+          "id": 2,
           "title": "This is a second pretend result title",
           "description": "This is a second pretend result description.",
           "link": "https://www.youtube.com/@DougDeMuro"
@@ -35,10 +37,22 @@ class SearchController < ApplicationController
   end
   
   def object
-    json = {
-      "title": "this is a pretend object title in some pretend json",
-      "description": "this is a pretend object description in some pretend json"
-    }
+    object = params[:object]
+    if object == 1
+      json = {
+        "id": 1,
+        "title": "This is a pretend result title",
+        "description": "This is a pretend result description.",
+        "link": "https://www.youtube.com/@harrysgarage"
+      }
+    elsif object == 2
+      json = {
+        "id": 2,
+        "title": "This is a second pretend result title",
+        "description": "This is a second pretend result description.",
+        "link": "https://www.youtube.com/@DougDeMuro"
+      }
+    end
     render( :json => json, status: :ok)
   end
 end
