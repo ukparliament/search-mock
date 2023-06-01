@@ -1,4 +1,10 @@
+# We require the example XML.
+require 'xml/results.rb'
+
 class SearchController < ApplicationController
+  
+  # We include the example XM modules
+  include RESULTS_XML
   
   def index
   end
@@ -12,29 +18,13 @@ class SearchController < ApplicationController
   end
   
   def results
-    json = {
-      "results": [
-        {
-          "id": 1,
-          "title": "This is a pretend result title",
-          "description": "This is a pretend result description.",
-          "link": "https://www.youtube.com/@harrysgarage"
-        },
-        {
-          "id": 2,
-          "title": "This is a second pretend result title",
-          "description": "This is a second pretend result description.",
-          "link": "https://www.youtube.com/@DougDeMuro"
-        }
-      ],
-      "result_set":{
-        "result_count": 357,
-        "limit": 30,
-        "offset": 10
-      }
-    }
-    render( :json => json, status: :ok)
+    xml = results_xml
+    render( :xml => xml, status: :ok)
   end
+  
+  
+  
+  
   
   def object
     object = params[:object].to_i
