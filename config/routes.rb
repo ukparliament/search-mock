@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   
   get 'search-mock' => 'search#index', :as => 'home'
   get 'search-mock/form' => 'search#form', :as => 'form'
-  get 'search-mock/results' => 'search#results', :as => 'results'
+  get 'search-mock/results/:document_type' => 'search#results', :as => 'results'
   get 'search-mock/objects/:object' => 'search#object', :as => 'object'
 end
