@@ -1,6 +1,6 @@
-module RESULTS_XML
+module WRITTEN_STATEMENT_SOLR_RESULTS_XML
 
-  def results_xml = "<?xml version='1.0' encoding='UTF-8'?>
+  def written_statment_results_xml = "<?xml version='1.0' encoding='UTF-8'?>
 <response>
 
 <lst name='responseHeader'>
