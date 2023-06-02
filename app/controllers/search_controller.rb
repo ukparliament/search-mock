@@ -1,10 +1,10 @@
 # We require the example XML.
-require 'xml/results.rb'
+require 'xml/results/written-statements/solr.rb'
+
+# We include the example XML modules.
+include WRITTEN_STATEMENT_SOLR_RESULTS_XML
 
 class SearchController < ApplicationController
-  
-  # We include the example XM modules
-  include RESULTS_XML
   
   def index
   end
@@ -18,7 +18,17 @@ class SearchController < ApplicationController
   end
   
   def results
-    xml = results_xml
+    
+    # We get the document type from the URL parameter.
+    document_type = params[:document_type]
+    
+    # We check the document type, load the associated XML ...
+    case document_type
+    when 'written-statements'
+      xml = written_statment_results_xml
+    end
+    
+    # ... and render as XML.
     render( :xml => xml, status: :ok)
   end
   
