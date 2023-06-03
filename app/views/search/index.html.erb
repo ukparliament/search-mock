@@ -4,7 +4,7 @@
 	<li>
 		<%= content_tag( 'p', 'Results' ) %>
 		<ul>
-			<%= content_tag( 'p', link_to( 'Written statments', results_url( :document_type => 'written-statements' ) ) ) %>
+			<%= content_tag( 'p', "Written statements (#{link_to( 'XML', results_url( :document_type => 'written-statements', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'written-statements', :format => 'json' ) )})".html_safe ) %>
 		</ul>
 	</li>
 	<%= content_tag( 'li', link_to( 'Object 1', object_url( :object => 1 ) ) ) %>
