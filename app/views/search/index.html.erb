@@ -7,6 +7,10 @@
 			<%= content_tag( 'p', "Written statements (#{link_to( 'XML', results_url( :document_type => 'written-statements', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'written-statements', :format => 'json' ) )} / #{link_to( 'Ruby object', results_url( :document_type => 'written-statements', :format => 'rb' ) )})".html_safe ) %>
 		</ul>
 	</li>
-	<%= content_tag( 'li', link_to( 'Object 1', object_url( :object => 1 ) ) ) %>
-	<%= content_tag( 'li', link_to( 'Object 2', object_url( :object => 2 ) ) ) %>
+	<li>
+		<%= content_tag( 'p', 'Objects' ) %>
+		<ul>
+			<%= content_tag( 'p', "A written statement (#{link_to( 'XML', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'xml' ) )} / #{link_to( 'JSON', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'json' ) )} / #{link_to( 'Ruby object', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'rb' ) )})".html_safe ) %>
+		</ul>
+	</li>
 </ul>
