@@ -1,16 +1,20 @@
-<%= content_tag( 'h1', 'Mocked up JSON to prototype search with' ) %>
+<%= content_tag( 'h1', 'Mocked up data to prototype search with' ) %>
 <ul>
 	<%= content_tag( 'li', link_to( 'Form', form_url ) ) %>
 	<li>
 		<%= content_tag( 'p', 'Results' ) %>
 		<ul>
-			<%= content_tag( 'p', "Written statements (#{link_to( 'XML', results_url( :document_type => 'written-statements', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'written-statements', :format => 'json' ) )} / #{link_to( 'Ruby object', results_url( :document_type => 'written-statements', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "Research briefings (#{link_to( 'XML', results_url( :document_type => 'research-briefings', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'research-briefings', :format => 'json' ) )} / #{link_to( 'Ruby object', results_url( :document_type => 'research-briefings', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "Written questions (#{link_to( 'XML', results_url( :document_type => 'written-questions', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'written-questions', :format => 'json' ) )} / #{link_to( 'Ruby object', results_url( :document_type => 'written-questions', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "Written statements (#{link_to( 'XML', results_url( :document_type => 'written-statements', :format => 'xml' ) )} / #{link_to( 'JSON', results_url( :document_type => 'written-statements', :format => 'json' ) )} / #{link_to( 'Ruby object', results_url( :document_type => 'written-statements', :format => 'rb' ) )})".html_safe ) %>
 		</ul>
 	</li>
 	<li>
 		<%= content_tag( 'p', 'Objects' ) %>
 		<ul>
-			<%= content_tag( 'p', "A written statement (#{link_to( 'XML', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'xml' ) )} / #{link_to( 'JSON', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'json' ) )} / #{link_to( 'Ruby object', object_url( :object => 'http://data.parliament.uk/writtenparliamentaryquestion/commons/2014-15/225322', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "A research briefing (#{link_to( 'XML', object_url( :object => 'http://data.parliament.uk/resources/342599', :format => 'xml' ) )} / #{link_to( 'JSON', object_url( :object => 'http://data.parliament.uk/resources/342599', :format => 'json' ) )} / #{link_to( 'Ruby object', object_url( :object => 'http://data.parliament.uk/resources/342599', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "A written question (#{link_to( 'XML', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Lords/2012-12-10/1212106000156', :format => 'xml' ) )} / #{link_to( 'JSON', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Lords/2012-12-10/1212106000156', :format => 'json' ) )} / #{link_to( 'Ruby object', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Lords/2012-12-10/1212106000156', :format => 'rb' ) )})".html_safe ) %>
+			<%= content_tag( 'li', "A written statement (#{link_to( 'XML', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Commons/2012-12-18/12121863000016', :format => 'xml' ) )} / #{link_to( 'JSON', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Commons/2012-12-18/12121863000016', :format => 'json' ) )} / #{link_to( 'Ruby object', object_url( :object => 'http://hansard.intranet.data.parliament.uk/Commons/2012-12-18/12121863000016', :format => 'rb' ) )})".html_safe ) %>
 		</ul>
 	</li>
 </ul>
